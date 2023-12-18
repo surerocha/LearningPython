@@ -1,0 +1,60 @@
+##Código produzido para um trabalho exigido durante a disciplina de Fundamentos da Programação 1##
+##Esse código pergunta as notas do aluno e por meio da lógica de aprovação do IFCE-Campus Fortaleza no semestre 2022.2 irá dizer se o estudante está reprovado ou não##
+print('CÁLCULO DA MÉDIA')
+print('Sejam bem-vindos a calculadora da felicidade ou tristeza dependendo de suas notas. Boa sorte, meu caro estudante!!!')
+
+print('')
+
+print('Você deseja fazer o teste?')
+print('Digite 1 para Opção SIM')
+print('Digite 2 para Opção NÃO')
+
+print('')
+
+opcao = int(input('Digite sua Escoha: '))
+print('')
+
+if opcao == 1:
+
+  print('Digite as Notas da N1:')
+  notaN1_1 = float(input('Digite 1ª Nota N1: '))
+  notaN1_2 = float(input('Digite 2ª Nota N1: '))
+  mediaN1 = (notaN1_1+notaN1_2)/2
+  print('Média da N1 é:', mediaN1)
+  print('________________________________________')
+  print('')
+
+  print('Digite as Notas da N2:')
+  notaN2_1 = float(input('Digite 1ª Nota N2: '))
+  notaN2_2 = float(input('Digite 2ª Nota N2: '))
+  mediaN2 = (notaN2_1+notaN2_2)/2
+  print('Média da N2 é:', mediaN2)
+  print('________________________________________')
+  print('')
+
+  mediaFinal = (mediaN1*2 + mediaN2*3) / 5
+  print('Resultado Média Final:', mediaFinal)
+  print('________________________________________')
+  print('')
+
+  if mediaFinal >= 6:
+      print('Você foi Aprovado. Parabéns!')
+  elif mediaFinal >=3:
+    print('Eita... Você foi para Avaliação Final!')
+    print('')
+  
+    aF = float(input('Digite sua Nota AF: '))
+    mediaAF = (mediaFinal + aF)/2
+    if mediaAF >= 6:
+     print('Ufa... Você foi APROVADO!')
+    else:
+     print('É... Infelizmente, você foi REPROVADO!')
+  
+  else:
+   print('Vixe... Você foi Reprovado!!!')
+
+  print('________________________________________')
+
+elif opcao == 2:
+  print('O programa será encerrado!')
+  exit()
