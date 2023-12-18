@@ -1,0 +1,36 @@
+##jogoQuemChegaMaisPerto?##
+K1=0
+K2=0
+SK1=0
+SK2=0
+R=int(input('Quantas rodadas você deseja jogar? '))
+for x in range (1, R+1):
+  J1=int(input('Jogador 1, qual número você quer jogar de 1 até 100? ')[:3])
+  J2=int(input('Jogador 2, qual número você quer jogar de 1 até 100? ') [:3])
+  from random import randint
+  N=randint (1,101)  
+  print('O número sorteado foi', N)
+  if J1>N:
+    K1=J1-N
+  else:
+    K1=N-J1
+  SK1=SK1+K1
+  if J2>N:
+    K2=J2-N
+  else:
+    K2=N-J2   
+  SK2=SK2+K2
+  if K1<K2:
+    print('O jogador 1 venceu essa rodada com', K1,'pontos...')
+  else:
+    print('O jogador 2 venceu essa rodada com', K2,'pontos...')
+  print('')
+if SK1<SK2:
+  print('Jogador 1 venceu com', SK1,'pontos :)')
+  print('Jogador 2 perdeu com', SK2,'pontos :(')
+else:
+  print('Jogador 2 venceu com', SK2,'pontos :)')
+  print('Jogador 1 perdeu com', SK1,'pontos :(')
+  
+
+  
